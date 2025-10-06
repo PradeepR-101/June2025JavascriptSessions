@@ -2,6 +2,7 @@ class Person{
     // name;
     // age;
     //const.. will be called when we create the object of this class
+    //only one const will be allowed in js there is no constrcuctor overloading concept
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -32,12 +33,12 @@ class Person{
 //create the object of this class: using new keyword
 
 let p = new Person('peter');
-console.log(p);
+console.log(p);     // {name: "peter", age: undefined}
 
 let p1 = new Person('Devi', 30);
 console.log(p1.name);
 console.log(p1.age);
-console.log(p1);
+console.log(p1);        // {name: "Devi", age: 30}
 
 p1.drive(120);
 
@@ -50,9 +51,9 @@ p1.getInfo();
 
 
 // let p2 = new Person();
-// console.log(p2.name);
-// console.log(p2.age);
-// console.log(p2);
+// console.log(p2.name);   //undefined
+// console.log(p2.age);    //undefined
+// console.log(p2);        // {name: undefined, age: undefined}
 
 //new Person('tom', 35);//gc
 
