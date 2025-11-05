@@ -12,3 +12,11 @@ function compareTwoArrays(arr1,arr2){
 }
 
 console.log(compareTwoArrays(arr1,arr2));
+
+//or
+
+function arraysEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+console.log(arraysEqual([1,2], [1,2])); // true
+console.log(arraysEqual([1,2], [2,1])); // false

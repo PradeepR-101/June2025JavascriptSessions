@@ -18,3 +18,12 @@ const factorailOfNum = (num)=>{
   }
 }
 console.log(factorailOfNum(5))
+
+//or
+
+function factorial(n) {
+  return n <= 1 ? 1 : n * factorial(n - 1);
+}
+console.log(factorial(5)); // 120
+console.log(factorial(0)); // 1
+console.log(factorial(-3)); // Error: Factorial not possible with negative numbers

@@ -16,4 +16,12 @@ let expectedArray = [];
 }
 
 console.log(vowelsString(s))
+console.log(vowelsString(s).length)
 
+//or
+
+let str = s.split('');
+
+let vowelEle = str.filter((ele) => ['a','e','i','o','u'].includes(ele))
+
+console.log(vowelEle)

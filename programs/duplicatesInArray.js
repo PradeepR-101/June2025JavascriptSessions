@@ -6,9 +6,12 @@ let arr = [1, 2, 3, 2, 4, 5, 1, 6, 3];
 //arr.indexOf(ele)!==index
 //1st occurrence index of 1 is 0 !== 0 false
 //2nd occurrence index of 1 is 0!== 6 true
+//to find duplicate numbers in array
 let duplicatess = arr.filter((ele,index,arr)=> arr.indexOf(ele)!==index)
-
 console.log(duplicatess)
+
+//to remove duplicate numbers in array
+console.log([...new Set(arr)])
 
 //or
 

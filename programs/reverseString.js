@@ -7,6 +7,7 @@ let reverseString = (str)=>{
   let reverseArr = strToArr.reverse();
   let strReverse = reverseArr.join("");
   return strReverse;
+  //return str.split("").reverse().join("");
 }
 
 console.log(reverseString(s))
@@ -16,7 +17,8 @@ console.log(reverseString(s))
 let reverseString1 = (str)=>{
   let rev = "";
    for(let i=0; i<str.length; i++){
-     rev = str[i] + rev;
+     //rev = str[i] + rev;
+     rev = str.charAt(i) + rev
    }
    return rev;
 }
