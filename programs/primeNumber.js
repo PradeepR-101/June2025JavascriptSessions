@@ -2,8 +2,6 @@
 
 let arr = [1,2,4,6,7,8,10];
 
-arr.forEach
-
 //prime Number
 //number divisible by itself or 1
 //modulus should be zero
@@ -11,19 +9,19 @@ arr.forEach
 const isPrimeNumber = (num)=>{
   if(num===1){
     console.log(`${num} is not prime num neither composite`);
+    return undefined;
   }
   else if(num<1){
-    console.log(`${num} prime number not possible with zero and negative numbers`)
+    console.log(`${num} prime number not possible with zero and negative numbers`);
+    return undefined;
   }
   else{
     for(let i=2; i<num; i++){
       if(num%i===0){
         return false;
       }
-      else{
-        return true;
-      }
     }
+    return true;
   }
 }
 
