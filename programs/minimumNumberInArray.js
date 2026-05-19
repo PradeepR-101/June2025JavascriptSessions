@@ -10,6 +10,18 @@ let minimumNumberr = (arr)=>{
 }
 console.log('minimum number '+minimumNumberr(arr))
 
+//or
+
+//typescript with function
+// let arr = [1,2,4,6,7,8,10];
+
+// let minNum = (arr:number[]) => {
+//     return arr.reduce((pre,cur) => pre<cur?pre:cur)
+// }
+
+// console.log(minNum(arr))
+
+//or
 
 let min = arr[0];
 for (let i = 1; i < arr.length; i++) {
