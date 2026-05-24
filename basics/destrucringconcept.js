@@ -37,11 +37,11 @@ let person = {
     isActive: true
 };
 
-// let { name, age, salary } = person;
+let { name, age, salary } = person;
 
-// console.log(myName);
-// console.log(age);
-// console.log(salary);
+console.log(name);
+console.log(age);
+console.log(salary);
 
 //renaming
 // let { name: personname, age: personage, salary:personsalary } = person;
