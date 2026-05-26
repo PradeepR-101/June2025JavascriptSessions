@@ -1,6 +1,13 @@
+//A Promise is an object that represents eventual completion (or failure) of an asynchronous operation. 
+
+//It has three states:
 //pending
 //fulfilled - resolved -- it will be given to then()
 //rejected - error ---> it will be givem to catch()
+
+//"A Promise is a JavaScript object that handles asynchronous operations. 
+// We can handle it using .then()/.catch() or async/await with try/catch."
+//Promises solve callback hell (deeply nested callbacks)
 
 let myPromise = new Promise((resolve, reject) => {
     console.log('start the promise....');
@@ -119,19 +126,26 @@ let p1 = new Promise((resolve, reject) => {
 let p2 = new Promise((resolve, reject) => {
     setTimeout(() => {
         reject('p2 is reject.....')
-    }, 4000);
+    }, 1000);
 }) 
 
 
 let p3 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        reject('p3 is not done.....')
-    }, 4000);
+        resolve('p3 is done.....')
+    }, 2000);
 }) 
 
+// Promise.race() will return the result of the first promise that settles (either resolves or rejects).
+// In this case, p2 will reject first, so the catch block will execute with the error message from p2.
 Promise.race([p1, p2, p3])
     .then(result => {
                     console.log(result);
     }).catch(error => {
                     console.log(error);
-                })
+                }) //p2 is reject
+
+
+// Always mention why Promises exist (to avoid callback hell), 
+// how they work (3 states), and 
+// how you use them (async/await preferred in modern JS)

@@ -1,6 +1,17 @@
 //extract values from the array/objects and assign them to variables.
 
+//Destructuring lets you unpack values from arrays or properties from objects into distinct variables.
+
+// Array Destructuring
+// Unpacks values by position.
+
 let products = ['macbook', 'keyboard', 'imac'];
+
+// Without destructuring
+const first = products[0];
+const second = products[1];
+
+// With destructuring
 let [a, b, c] = products;
 
 console.log(a);
@@ -37,6 +48,11 @@ let person = {
     isActive: true
 };
 
+// Without destructuring
+const name = person.name;
+const age = person.age;
+
+// With destructuring
 let { name, age, salary } = person;
 
 console.log(name);
@@ -53,6 +69,7 @@ console.log(salary);
 // let { name: myName } = person;
 // console.log(myName);
 
+//default values
 let { name, age, salary, isActive, city = 'LA' } = person;
 console.log(name);
 console.log(age);
@@ -60,8 +77,13 @@ console.log(salary);
 console.log(isActive);
 console.log(city);
 
-console.log("=============");
 
+//rest properties
+const { name, ...rest } = person;
+console.log(rest); // { age: 30, salary: 12.33, isActive: true};
+
+
+console.log("=============");
 
 let user = {
     name: 'pradeep',
@@ -91,3 +113,17 @@ getInfo(user);//call by ref
 getDetails(user);
 getName(user);
 
+//===============
+
+// Destructuring in function parameters
+// Array
+function getFirst([first]) {
+  return first;
+}
+
+// Object
+function greet({ name, age = 18 }) {
+  return `Hi ${name}, age ${age}`;
+}
+
+greet({ name: 'Alice' }); // "Hi Alice, age 18"
