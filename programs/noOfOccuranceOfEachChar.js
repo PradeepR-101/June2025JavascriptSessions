@@ -9,15 +9,26 @@ for(let i=0; i<s.length; i++){
 
 let uniqueArrayElements = [...set];
 
-for(let uniqueEle of uniqueArrayElements){
-  let count = 0;
-  for(let i=0; i<s.length; i++){
-    if(uniqueEle === s[i]){
-      count++;
-    }
-  }
-  console.log(`${uniqueEle} = ${count}`)
-}
+uniqueArrayElements.forEach(ele => {
+    let count =0;
+    s.split('').forEach(char => {
+        if (ele===char){
+            count++;
+        }
+
+    })
+     console.log(`${ele} = ${count}`);
+})
+
+// for(let uniqueEle of uniqueArrayElements){
+//   let count = 0;
+//   for(let i=0; i<s.length; i++){
+//     if(uniqueEle === s[i]){
+//       count++;
+//     }
+//   }
+//   console.log(`${uniqueEle} = ${count}`)
+// }
 
 
 //or

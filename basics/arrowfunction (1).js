@@ -145,6 +145,10 @@ const user = {
 const Person = (name) => { this.name = name; }; // ❌
 const p = new Person("Raj"); // TypeError
 
+// const Person = function (name) { this.name = name; }; // ✅
+// const p = new Person("Raj");
+// console.log(p.name) // "Raj"
+
 // 3. When you need `arguments` object
 const showArgs = () => console.log(arguments); // ❌ not available
 
